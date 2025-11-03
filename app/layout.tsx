@@ -17,8 +17,8 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "AI57 Landing",
-  description: "Built with Next.js, TypeScript, Tailwind CSS, and more",
+  title: "AI57 Học Bổng",
+  description: "Học Bổng AI57",
 };
 
 export default function RootLayout({
