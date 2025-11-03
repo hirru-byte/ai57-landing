@@ -1,4 +1,10 @@
 // Application constants and configuration values
-// Example:
-// export const SITE_NAME = 'AI57 Landing';
-// export const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || '';
+export const SITE_NAME = "AI57 Landing";
+export const SITE_DESCRIPTION =
+  "Built with Next.js, TypeScript, Tailwind CSS, and more";
+
+// Re-export landing page constants
+export * from "./landing";
+
+// Re-export footer constants
+export * from "./footer";
