@@ -1,2 +1,2 @@
 // Export all custom hooks from this file
-// Example: export { useCustomHook } from './use-custom-hook';
+export { useFormWithValidation } from "./use-form";
