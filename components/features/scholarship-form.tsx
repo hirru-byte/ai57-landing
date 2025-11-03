@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { scholarshipFormSchema, type ScholarshipFormData } from "@/types/forms";
+import { FloatingLabelInput } from "../ui/floating-input";
 
 export function ScholarshipForm() {
   const form = useForm<ScholarshipFormData>({
@@ -57,9 +58,14 @@ export function ScholarshipForm() {
           name="name"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Họ và tên *</FormLabel>
               <FormControl>
-                <Input placeholder="Nhập họ và tên của bạn" {...field} />
+                <FloatingLabelInput
+                  className="h-[48px] rounded-2xl"
+                  id="name"
+                  label="Họ và tên"
+                  type="text"
+                  {...field}
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -71,9 +77,14 @@ export function ScholarshipForm() {
           name="phone"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Số điện thoại *</FormLabel>
               <FormControl>
-                <Input type="tel" placeholder="0123 456 789" {...field} />
+                <FloatingLabelInput
+                  className="h-[48px] rounded-2xl"
+                  id="phone"
+                  label="Số điện thoại"
+                  type="tel"
+                  {...field}
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -85,9 +96,14 @@ export function ScholarshipForm() {
           name="email"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Email *</FormLabel>
               <FormControl>
-                <Input type="email" placeholder="your@email.com" {...field} />
+                <FloatingLabelInput
+                  className="h-[48px] rounded-2xl"
+                  id="email"
+                  label="Email"
+                  type="email"
+                  {...field}
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -97,7 +113,7 @@ export function ScholarshipForm() {
         <Button
           type="submit"
           size="lg"
-          className="w-full"
+          className="w-full h-[48px] rounded-2xl"
           disabled={form.formState.isSubmitting}
         >
           {form.formState.isSubmitting ? "Đang đăng ký..." : "Đăng ký ngay"}
